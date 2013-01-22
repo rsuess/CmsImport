@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+
+
+<config>
+    <menu>
+        <system>
+            <children>
+                <rsuess_cmsimport_config translate="title" module="rsuess_cmsimport">
+                    <title>CMS Content Config</title>
+                    <action>rsuess_cmsimport/adminhtml_import_config</action>
+                 
+                    <sort_order>1010</sort_order>
+                   
+                </rsuess_cmsimport_config>
+            </children>
+        </system>
+        <cms>
+            <children>
+                <rsuess_cmsimport translate="title" module="rsuess_cmsimport">
+                    <title>Import CMS Content</title>
+                    <sort_order>1001</sort_order>
+                    <children>
+                        <page>
+                            <title>CMS Page</title>
+                            <action>rsuess_cmsimport/adminhtml_import_page</action>
+                            <sort_order>10</sort_order>
+                        </page>
+                        <block>
+                            <title>CMS Static Block</title>
+                            <action>rsuess_cmsimport/adminhtml_import_block</action>
+                            <sort_order>20</sort_order>
+                        </block>
+                    </children>
+                </rsuess_cmsimport>
+            </children>
+        </cms>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <rsuess_cmsimport translate="title">
+                                <title>CMS Import Config</title>
+                                <sort_order>1001</sort_order>
+                            </rsuess_cmsimport>
+                        </children>
+                    </system>
+                </children>
+                <children>
+                    <cms>
+                        <children>
+                            <rsuess_cmsimport translate="title">
+                                <title>CMS Import</title>
+                                <sort_order>1001</sort_order>
+                            </rsuess_cmsimport>
+                        </children>
+                    </cms>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    
+    <layout>
+        <updates>
+            <rsuess_cmsimport>
+                <file>rsuess_cmsimport.xml</file>
+            </rsuess_cmsimport>
+        </updates>
+    </layout>
+ 
+</config>

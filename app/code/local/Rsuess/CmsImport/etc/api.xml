@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<config>
+    <api>
+        <resources>
+            <cmsimport translate="title" module="rsuess_cmsimport">
+                <model>rsuess_cmsimport/export_api</model>
+                <title>CMS Data Export</title>
+                <acl>rsuess/cmsimport</acl>
+                <methods>
+                    <getpage translate="title" module="rsuess_cmsimport">
+                        <title>Get Page Data</title>
+                        <method>getCmsPage</method>
+                        <acl>rsuess/cmsimport/page</acl>
+                    </getpage>
+                    <listpage translate="title" module="rsuess_cmsimport">
+                        <title>List Page Data</title>
+                        <method>listCmsPage</method>
+                        <acl>rsuess/cmsimport/page</acl>
+                    </listpage>
+                    <getblock translate="title" module="rsuess_cmsimport">
+                        <title>Get Static Block Data</title>
+                        <method>getCmsBlock</method>
+                        <acl>rsuess/cmsimport/block</acl>
+                    </getblock>
+                    <listblock translate="title" module="rsuess_cmsimport">
+                        <title>List Static Block Data</title>
+                        <method>listCmsBlock</method>
+                        <acl>rsuess/cmsimport/block</acl>
+                    </listblock>
+                </methods>
+            </cmsimport>
+        </resources>
+        <acl>
+            <resources>
+                <rsuess translate="title" module="rsuess_cmsimport">
+                    <title>Grand River</title>
+                    <sort_order>10000</sort_order>
+                    <cmsimport translate="title" module="rsuess_cmsimport">
+                        <title>CMS Export</title>
+                        <sort_order>10</sort_order>
+                        <page translate="title" module="rsuess_cmsimport">
+                            <title>Page Data</title>
+                        </page>
+                        <block translate="title" module="rsuess_cmsimport">
+                            <title>Static Block Data</title>
+                        </block>
+                    </cmsimport>
+                </rsuess>
+            </resources>
+        </acl>
+    </api>
+</config>

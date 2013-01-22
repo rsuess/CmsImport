@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Rsuess_CmsImport>
+            <version>0.1.0</version>
+        </Rsuess_CmsImport>
+    </modules>
+    <admin>
+        <routers>
+            <rsuess_cmsimport>
+                <use>admin</use>
+                <args>
+                    <module>Rsuess_CmsImport</module>
+                    <frontName>cmsimport</frontName>
+                </args>
+            </rsuess_cmsimport>
+        </routers>
+    </admin>
+    <global>
+        <models>
+            <rsuess_cmsimport>
+                <class>Rsuess_CmsImport_Model</class>
+                <resourceModel>rsuess_cmsimport_mysql4</resourceModel>
+            </rsuess_cmsimport>
+            <rsuess_cmsimport_mysql4>
+                <class>Rsuess_CmsImport_Model_Mysql4</class>
+                <entities>
+                    
+                    <soapserver>
+                        <table>cmsimport_soapserver</table>
+                    </soapserver>     
+                </entities>
+            </rsuess_cmsimport_mysql4>
+            
+            
+        </models>
+        
+        
+        <helpers>
+            <rsuess_cmsimport>
+                <class>Rsuess_CmsImport_Helper</class>
+            </rsuess_cmsimport>
+        </helpers>
+        <blocks>
+            <rsuess_cmsimport>
+                <class>Rsuess_CmsImport_Block</class>
+            </rsuess_cmsimport>
+        </blocks>
+        
+        
+        <resources>
+            <rsuess_cmsimport_setup>
+                <setup>
+                    <module>Rsuess_CmsImport</module>
+                </setup>
+                <!--connection>
+                    <use>core_setup</use>
+                </connection>
+                <rsuess_cmsimport_write>
+                    <connection>
+                        <use>core_write</use>
+                    </connection>
+                </rsuess_cmsimport_write>
+                <rsuess_cmsimport_read>
+                    <connection>
+                        <use>core_read</use>
+                    </connection>
+                </rsuess_cmsimport_read-->
+            </rsuess_cmsimport_setup>
+            
+           
+            
+            
+        </resources>
+    </global>
+</config>
